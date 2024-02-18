@@ -1,0 +1,258 @@
+body{
+    background-image: url('./font.png');
+}
+
+form.form_chek {
+    display: flex;
+    flex-direction: column;
+}
+
+.colls_rows {
+    display: flex;
+    margin: 30px 0px;
+    justify-content: center;
+}
+
+.colls_item {
+    display: flex;
+    margin: 30px 0px 50px 0px;
+    justify-content: center;
+}
+
+div.money {
+    padding: 0% 1% 0% 1%;
+    margin: 0px 2% 0% 2%;
+    border: 1px dotted;
+    font-size: 50px;
+    font-family: sans-serif;
+    cursor: pointer;
+    user-select: none;
+    max-width: 5%;
+    background-color: rgb(236, 255, 236);
+    border-radius: 10px;
+}
+
+div.items {
+    padding: 0% 1% 0% 1%;
+    margin: 0px 2% 0% 2%;
+    border: 1px dotted;
+    font-size: 50px;
+    font-family: sans-serif;
+    cursor: pointer;
+    user-select: none;
+    max-width: 5%;
+    background-color: rgb(236, 255, 236);
+    border-radius: 10px;
+}
+
+button.clear_money {
+    width: 5%;
+    margin: 0% 0% 0% 5%;
+    background-color: rgb(220, 245, 220);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button.clear_items {
+    width: 5%;
+    margin: 0% 0% 0% 5%;
+    background-color: rgb(220, 245, 220);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button.clear_money:hover {
+    background-color: rgb(233, 253, 233);
+}
+
+button.clear_items:hover {
+    background-color: rgb(233, 253, 233);
+}
+
+img.clear_img {
+    width: 70%;
+}
+
+form.list_check {
+    overflow-y: scroll;
+    scrollbar-color: transparent;
+    scrollbar-width: thin;
+    height: 200px;
+}
+
+button.press_sours {
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: rgb(166, 141, 255);
+    border: 1px double transparent;
+    border-bottom-color: rgb(56, 70, 56);
+    border-bottom-style: dashed;
+    border-bottom-width: 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 2%;
+    cursor: pointer;
+}
+
+
+button.press_sours:hover {
+    background-color: rgb(233, 253, 233);
+}
+
+form.list_check {
+    font-family: sans-serif;
+    font-size: 18px;
+    background-color: rgb(220, 245, 220);
+    border-bottom-left-radius: 10px;
+}
+
+@media (max-width: 750px) {
+    div.money {
+        font-size: 50px;
+        max-width: 7%;
+    }
+    
+    div.items {
+        font-size: 50px;
+        max-width: 7%;
+    }
+
+    button.clear_money {
+        width: 20%;
+        margin: 0px;
+    }
+    
+    button.clear_items {
+        width: 20%;
+        margin: 0px;
+    }
+
+    img.clear_img {
+        width: 20%;
+    }
+}
+
+@media (max-width: 650px) {
+    div.money {
+        font-size: 40px;
+        max-width: 9%;
+    }
+    
+    div.items {
+        font-size: 40px;
+        max-width: 9%;
+    }
+
+    button.clear_money {
+        width: 20%;
+        margin: 0px;
+        width: 100%;
+        margin: 5% 0% 0% 0% ;
+        background-color:rgb(220, 245, 220);
+        border: none;
+    }
+    
+    button.clear_items {
+        width: 20%;
+        margin: 0px;
+        width: 100%;
+        margin: 5% 0% 0% 0% ;
+        background-color: rgb(220, 245, 220);
+        border: none;
+    }
+
+    img.clear_img {
+        width: 3%;
+    }
+
+    .colls_rows {
+        flex-wrap: wrap;
+
+    }
+
+    .colls_item {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 550px) {
+    div.money {
+        max-width: 10%;
+        font-size: 42px;
+    }
+    
+    div.items {
+        max-width: 10%;
+        font-size: 42px;
+    }
+
+    button.clear_money {
+        width: 20%;
+        margin: 0px;
+        width: 100%;
+        margin: 5% 0% 0% 0% ;
+        background-color:rgb(220, 245, 220);
+        border: none;
+    }
+    
+    button.clear_items {
+        width: 20%;
+        margin: 0px;
+        width: 100%;
+        margin: 5% 0% 0% 0% ;
+        background-color: rgb(220, 245, 220);
+        border: none;
+    }
+
+    img.clear_img {
+        width: 5%;
+    }
+
+    .colls_rows {
+        flex-wrap: wrap;
+
+    }
+
+    .colls_item {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 387px) {
+
+    div.items {
+        margin: 0% 4%;
+    }
+
+    div.money {
+        margin: 0% 1%;
+    }
+
+    img.clear_img {
+        width: 10%;
+    }
+
+    .colls_item {
+        margin: 0px;
+    }
+
+    button.press_sours {
+        padding: 5%;
+        border-radius: 0px;
+    }
+
+    button.clear_items {
+        border: 1px double transparent;
+        border-bottom-color: rgb(56, 70, 56);
+        border-bottom-style: dashed;
+        border-bottom-width: 2px;
+        border-radius: 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}

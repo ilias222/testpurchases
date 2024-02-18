@@ -197,6 +197,7 @@ pressSaweShek.addEventListener('click', (e) =>{
                 document.onpointermove = (e) => {
                     elem.target.style.position = 'absolute';
                     elem.target.style.userSelect = 'none';
+                    elem.target.style.backgroundColor = 'red';
                     elem.target.style.zIndex = 999; 
                     elem.target.style.left = `${e.pageX - 50}px`; 
                 }
@@ -208,6 +209,7 @@ pressSaweShek.addEventListener('click', (e) =>{
         document.onpointermove = null;
         if(positionCheck + 20 > elem.target.getBoundingClientRect().left){
             elem.target.style.position = 'static';
+            elem.target.style.backgroundColor = 'transparent';
         } else{
             let newArr = [];
             arrObj.filter((e, index) => {

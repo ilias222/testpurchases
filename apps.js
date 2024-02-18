@@ -172,7 +172,7 @@ pressSaweShek.addEventListener('click', (e) =>{
     
     formCheckList.onpointerup = (elem) => {
         document.onpointermove = null;
-        if(positionCheck + 20 > elem.target.getBoundingClientRect().left){
+        if(positionCheck + 5 > elem.target.getBoundingClientRect().left){
             elem.target.style.position = 'static';
         } else{
             let newArr = [];

@@ -173,7 +173,7 @@ pressSaweShek.addEventListener('click', (e) =>{
     formCheckList.ontouchup = (elem) => {
         document.ontouchmove = null;
         if(positionCheck + 10 > elem.target.getBoundingClientRect().left){
-            elem.target.style.left = positionCheck + 'px';
+            // elem.target.style.left = positionCheck + 'px';
             elem.target.style.position = 'static';
         } else{
             let newArr = [];

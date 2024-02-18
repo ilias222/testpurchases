@@ -157,7 +157,10 @@ pressSaweShek.addEventListener('click', (e) =>{
 
     formCheckList.onpointerdown = (elem) => {
 
+        let tim='';
         if(elem.target.classList[1] == 'chekList'){
+
+            elem.target.style.backgroundColor = 'red';
 
             const deleteElem = () =>{
                 let newArr = [];
@@ -172,8 +175,15 @@ pressSaweShek.addEventListener('click', (e) =>{
                 elem.target.remove();
             };
 
-            setTimeout(deleteElem, 5000);
+            tim = setTimeout(deleteElem, 3000);
+        }
 
+        formCheckList.onpointerup = (elem) => {
+            
+            if(elem.target.classList[1] == 'chekList'){
+                clearTimeout(tim);
+                elem.target.style.backgroundColor = 'transparent';
+            }
         }
     }
     

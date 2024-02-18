@@ -108,6 +108,11 @@ form.list_check {
     border-bottom-left-radius: 10px;
 }
 
+.chekList{
+    margin-bottom: 1%;
+    box-shadow: 1px 1px 10px rgb(173, 199, 173);
+}
+
 @media (max-width: 750px) {
     div.money {
         font-size: 50px;
@@ -254,5 +259,9 @@ form.list_check {
         border-radius: 0px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+    }
+
+    .chekList {
+        font-size: 12px;
     }
 }

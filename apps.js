@@ -154,13 +154,13 @@ pressSaweShek.addEventListener('click', (e) =>{
 
 
     // Удаление записей из списка
-    formCheckList.onpointerdown = (elem) => {
+    formCheckList.ontouchdown = (elem) => {
 
         if(elem.target.classList[1] == 'chekList'){
 
             positionCheck = elem.target.getBoundingClientRect().left;
 
-                document.onpointermove = (e) => {
+                document.ontouchmove = (e) => {
                     elem.target.style.position = 'absolute';
                     elem.target.style.userSelect = 'none';
                     elem.target.style.zIndex = 999; 
@@ -170,9 +170,9 @@ pressSaweShek.addEventListener('click', (e) =>{
         }
     }
     
-    formCheckList.onpointerup = (elem) => {
-        document.onpointermove = null;
-        if(positionCheck + 5 > elem.target.getBoundingClientRect().left){
+    formCheckList.ontouchup = (elem) => {
+        document.ontouchmove = null;
+        if(positionCheck + 10 > elem.target.getBoundingClientRect().left){
             elem.target.style.position = 'static';
         } else{
             let newArr = [];

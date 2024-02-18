@@ -154,40 +154,64 @@ pressSaweShek.addEventListener('click', (e) =>{
 
 
     // Удаление записей из списка
+
     formCheckList.onpointerdown = (elem) => {
 
         if(elem.target.classList[1] == 'chekList'){
 
-            positionCheck = elem.target.getBoundingClientRect().left;
+            const deleteElem = () =>{
+                let newArr = [];
+                arrObj.filter((e, index) => {
+                    if(e.id !=elem.target.className){
+                        newArr.push(e);
+                    } else{
+                        delete arrObj[index]
+                    };
+                });
+                scalle(newArr);
+                elem.target.remove();
+            };
 
-                document.onpointermove = (e) => {
-                    elem.target.style.position = 'absolute';
-                    elem.target.style.userSelect = 'none';
-                    elem.target.style.zIndex = 999; 
-                    elem.target.style.left = `${e.pageX - 50}px`; 
-                }
+            setTimeout(deleteElem, 5000);
 
         }
     }
     
-    formCheckList.onpointerup = (elem) => {
-        document.onpointermove = null;
-        if(positionCheck + 20 > elem.target.getBoundingClientRect().left){
-            elem.target.style.position = 'static';
-        } else{
-            let newArr = [];
-            arrObj.filter((e, index) => {
-                if(e.id !=elem.target.className){
-                    newArr.push(e);
-                } else{
-                    delete arrObj[index]
-                };
-            });
-            scalle(newArr);
-            elem.target.remove();
+
+    // formCheckList.onpointerdown = (elem) => {
+
+    //     if(elem.target.classList[1] == 'chekList'){
+
+    //         positionCheck = elem.target.getBoundingClientRect().left;
+
+    //             document.onpointermove = (e) => {
+    //                 elem.target.style.position = 'absolute';
+    //                 elem.target.style.userSelect = 'none';
+    //                 elem.target.style.zIndex = 999; 
+    //                 elem.target.style.left = `${e.pageX - 50}px`; 
+    //             }
+
+    //     }
+    // }
+    
+    // formCheckList.onpointerup = (elem) => {
+    //     document.onpointermove = null;
+    //     if(positionCheck + 20 > elem.target.getBoundingClientRect().left){
+    //         elem.target.style.position = 'static';
+    //     } else{
+    //         let newArr = [];
+    //         arrObj.filter((e, index) => {
+    //             if(e.id !=elem.target.className){
+    //                 newArr.push(e);
+    //             } else{
+    //                 delete arrObj[index]
+    //             };
+    //         });
+    //         scalle(newArr);
+    //         elem.target.remove();
             
-        }
-    }
+    //     }
+    // }
     
 
 });

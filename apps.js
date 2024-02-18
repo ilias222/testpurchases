@@ -164,7 +164,7 @@ pressSaweShek.addEventListener('click', (e) =>{
                     elem.target.style.position = 'absolute';
                     elem.target.style.userSelect = 'none';
                     elem.target.style.zIndex = 999; 
-                    elem.target.style.left = `${e.pageX - 50}px`; 
+                    elem.target.style.left = `${e.pageX}px`; 
                 }
 
         }

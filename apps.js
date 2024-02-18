@@ -162,6 +162,7 @@ pressSaweShek.addEventListener('click', (e) =>{
 
                 document.onpointermove = (e) => {
                     elem.target.style.position = 'absolute';
+                    elem.target.style.userSelect = 'none';
                     elem.target.style.zIndex = 999; 
                     elem.target.style.left = `${e.pageX - 50}px`; 
                 }
@@ -171,7 +172,7 @@ pressSaweShek.addEventListener('click', (e) =>{
     
     formCheckList.onpointerup = (elem) => {
         document.onpointermove = null;
-        if(positionCheck + 100 > elem.target.getBoundingClientRect().left){
+        if(positionCheck + 20 > elem.target.getBoundingClientRect().left){
             elem.target.style.position = 'static';
         } else{
             let newArr = [];
